@@ -5,8 +5,13 @@ GitHub.CommitBadge.loadData = function(commitMessages, targetElement, limit) {
   targetElement.addClass('github-commit-badge-container');
   var template = $.template(
     '<div class="github-commit-badge-outline">' +
-      '<a href="${projectUrl}" class="github-commit-badge-username">${projectName}</a>' +
-      '<img src="${gravatar}" class="github-commit-badge-gravatar">' +
+      '<div class="github-commit-badge-username">' +
+        '<a href="${projectUrl}">${projectName}</a>' +
+      '</div>' +
+      '<div class="github-commit-badge-diffline">' +
+        '<span id="github-commit-badge-text">committed</span>' +
+        '<img src="${gravatar}" class="github-commit-badge-gravatar" />' +
+      '</div>' +
     '</div>');
 
   for (var i=0; i < commitMessages.commits.length && i < limit; i++) {

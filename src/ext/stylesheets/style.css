@@ -21,7 +21,7 @@ div.github-commit-badge-username {
 	padding-left: 18px;
 	color: yellow;
 	font-weight: bold;
-	background-image:url(images/public.png);
+	background-image:url(../images/public.png);
 	background-repeat: no-repeat;
 	background-position: 0px 1px;
 }
@@ -36,7 +36,7 @@ div.github-commit-badge-commitmessage {
 	padding-left: 90px;
 	margin-top: 5px;
 	margin-bottom: 5px;
-	background-image:url(images/commit.png);
+	background-image:url(../images/commit.png);
 	background-repeat: no-repeat;
 	background-position: 70px 0px;
 }

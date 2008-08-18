@@ -62,11 +62,9 @@
 		}},
 		
 		"test that commits include project link": function() { with(this) {
-			var actual = $('.github-commit-badge .github-commit-badge-outline a.github-commit-badge-username').attr('href');
+			var actual = $('.github-commit-badge .github-commit-badge-outline div.github-commit-badge-username a').attr('href');
 			assertEqual('http://github.com/drnic/github-badges', actual);
 		}},
-
-		
 
     "test that commits include author gravatar": function() { with(this) {
 			var expectedGravatarUrl = "http://www.gravatar.com/avatar/" +
