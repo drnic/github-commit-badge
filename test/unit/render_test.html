@@ -51,18 +51,18 @@
 
     "test that badge shows all commits": function() { with(this) {
 			assertEqual(2, commitMessages.commits.length);
-      assertEqual(2, $('.github-commit-badge .item').size(), "Items not displayed");
+      assertEqual(2, $('.github-commit-badge .github-commit-badge-outline').size(), "Items not displayed");
     }},
 
 		"test that badge only shows limited commits": function() { with(this) {
       $('.github-commit-badge').html('');
 			GitHub.CommitBadge.loadData(commitMessages, $('#my_repo'), 1);
 			assertEqual(2, commitMessages.commits.length);
-      assertEqual(1, $('.github-commit-badge .item').size(), "Items not displayed");
+      assertEqual(1, $('.github-commit-badge .github-commit-badge-outline').size(), "Items not displayed");
 		}},
 		
 		"test that commits include project link": function() { with(this) {
-			var actual = $('.github-commit-badge .item a.github-commit-badge-username').attr('href');
+			var actual = $('.github-commit-badge .github-commit-badge-outline a.github-commit-badge-username').attr('href');
 			assertEqual('http://github.com/drnic/github-badges', actual);
 		}},
 
@@ -71,7 +71,7 @@
     "test that commits include author gravatar": function() { with(this) {
 			var expectedGravatarUrl = "http://www.gravatar.com/avatar/" +
 				hex_md5('drnicwilliams@gmail.com') + "?s=60";
-      assertEqual(expectedGravatarUrl, $('.github-commit-badge .item img.github-commit-badge-gravatar').attr('src'));
+      assertEqual(expectedGravatarUrl, $('.github-commit-badge .github-commit-badge-outline img.github-commit-badge-gravatar').attr('src'));
     }},
 
   }); 

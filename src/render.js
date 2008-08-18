@@ -4,7 +4,7 @@ GitHub.CommitBadge = GitHub.CommitBadge || {};
 GitHub.CommitBadge.loadData = function(commitMessages, targetElement, limit) {
   targetElement.addClass('github-commit-badge-container');
   var template = $.template(
-    '<div class="item github-commit-badge-outline">' +
+    '<div class="github-commit-badge-outline">' +
       '<a href="${projectUrl}" class="github-commit-badge-username">${projectName}</a>' +
       '<img src="${gravatar}" class="github-commit-badge-gravatar">' +
     '</div>');
